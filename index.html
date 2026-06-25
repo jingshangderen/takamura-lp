@@ -76,14 +76,28 @@
     position:relative;
     padding:0;
     overflow:hidden;
-    min-height:620px;
-    background:
-      linear-gradient(180deg, rgba(15,13,12,.82) 0%, rgba(15,13,12,.42) 38%, rgba(15,13,12,.62) 62%, rgba(15,13,12,.95) 100%),
-      url('wing_truck.jpeg') center 70% / cover no-repeat;
+    min-height:640px;
+    background-color:#0f0d0c;
+    background-image:
+      linear-gradient(90deg, rgba(15,13,12,.96) 0%, rgba(15,13,12,.55) 28%, rgba(15,13,12,.05) 50%, rgba(15,13,12,.35) 100%),
+      url('wing_truck.jpeg');
+    background-position:center, right center;
+    background-size:cover, contain;
+    background-repeat:no-repeat, no-repeat;
     color:#fff;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+  }
+  @media(max-width:760px){
+    .hero{
+      background-image:
+        linear-gradient(180deg, rgba(15,13,12,.55) 0%, rgba(15,13,12,.9) 100%),
+        url('wing_truck.jpeg');
+      background-position:center, center bottom;
+      background-size:cover, contain;
+      min-height:520px;
+    }
   }
   .hero::after{
     content:"";
